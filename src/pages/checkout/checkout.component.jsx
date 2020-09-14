@@ -40,7 +40,7 @@ function Checkout({ cartItems, cartTotal }) {
         <br />
         4242 4242 4242 4242 - Exp: any future month - CVV: 123
       </div>
-      <StripeButton />
+      <StripeButton price={cartTotal} />
     </div>
   );
 }
