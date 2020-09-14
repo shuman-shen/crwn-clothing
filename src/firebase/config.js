@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: `${process.env.FIREBASE_API_KEY}`,
+  apiKey: "AIzaSyAZcaUVJzyhgqBNi0xdynA-J5u9pg5wBvI",
   authDomain: "crwn-db-fd406.firebaseapp.com",
   databaseURL: "https://crwn-db-fd406.firebaseio.com",
   projectId: "crwn-db-fd406",
