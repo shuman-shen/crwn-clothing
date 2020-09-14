@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
+<<<<<<< HEAD
     "node": "11.x",
     "npm": "6.11.2"
+=======
+    "node": "v11.x"
+>>>>>>> 84be2e02b3fd2121c285dd4eee59282ec9bdf2a6
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
