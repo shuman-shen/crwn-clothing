@@ -9,7 +9,6 @@ import {
 import {} from "../../redux/cart/cart.actions";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import StripeButton from "../../components/stripe-button/stripe-button.component";
-import StripeForm from "../../components/stripe-form/stripe-form.component";
 
 function Checkout({ cartItems, cartTotal }) {
   return (
