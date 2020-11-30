@@ -25,31 +25,31 @@ function App(props) {
   const unsubscribeRef = useRef(null);
   const { currentUser, setCurrentUser } = props;
 
-  useEffect(() => {
-    const userStatus = auth.onAuthStateChanged(async (userAuth) => {
-      if (userAuth) {
-        const userRef = await creatUserProfileDocument(userAuth);
+  // useEffect(() => {
+  // const userStatus = auth.onAuthStateChanged(async (userAuth) => {
+  //   if (userAuth) {
+  //     const userRef = await creatUserProfileDocument(userAuth);
 
-        userRef.onSnapshot((snapShot) => {
-          const newUser = {
-            id: snapShot.id,
-            ...snapShot.data(),
-          };
-          setCurrentUser(newUser);
-          //console.log(userAuth);
-        });
-      } else {
-        setCurrentUser(userAuth);
-      }
-      // addCollectionAndDocuments("collections", collectionArray.map(({title, items})=>({title, items})));
-    });
+  //     userRef.onSnapshot((snapShot) => {
+  //       const newUser = {
+  //         id: snapShot.id,
+  //         ...snapShot.data(),
+  //       };
+  //       setCurrentUser(newUser);
+  //       //console.log(userAuth);
+  //     });
+  //   } else {
+  //     setCurrentUser(userAuth);
+  //   }
+  // addCollectionAndDocuments("collections", collectionArray.map(({title, items})=>({title, items})));
+  // });
 
-    unsubscribeRef.current = userStatus;
-    return () => {
-      const unsubscribe = unsubscribeRef.current;
-      unsubscribe();
-    };
-  }, [setCurrentUser]);
+  //   unsubscribeRef.current = userStatus;
+  //   return () => {
+  //     const unsubscribe = unsubscribeRef.current;
+  //     unsubscribe();
+  //   };
+  // }, [setCurrentUser]);
   return (
     <div>
       <Header />
